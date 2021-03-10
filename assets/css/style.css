@@ -1,0 +1,71 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+canvas {
+  margin-top: 10px;
+  display: block;
+}
+h2 {
+  display: inline;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+#play {
+  letter-spacing: 2px;
+  font-weight: 700;
+  border-style: solid;
+  margin: 0px auto;
+  padding: 2px;
+  transition: all 1s;
+  cursor: pointer;
+  background-color: white;
+  color: green;
+  visibility: hidden;
+  border-width: 0.5px;
+  border-color: black;
+}
+#play:hover {
+  letter-spacing: 4px;
+  font-size: 17px;
+  color: white;
+  background-color: black;
+}
+.webCam {
+  position: fixed;
+  right: 0px;
+  top: -25px;
+  transform: scaleX(-1);
+}
+.controls {
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+.controls-container {
+  display: inline;
+  width: 10em;
+}
+.controls-container-button {
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: auto;
+  border-style: solid;
+  display: block;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  transition: all 1s;
+  cursor: pointer;
+  background-color: white;
+  color: green;
+  border-width: 0.5px;
+  border-color: black;
+}
+
+.controls-container-button:active {
+  color: white;
+  background-color: black;
+}
