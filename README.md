@@ -10,7 +10,7 @@ npm install
 ```
 npm start
 ```
-### Live Demo: [Link](https://asto7.github.io/ball-blast-ai/)
+#### Live Demo: [Link](https://asto7.github.io/ball-blast-ai/)
 
 #### How to Train the Model In Browser
 - Long Press On the Class Label Button for which you want to train the model, meanwhile webcam will capture the images(Current position) and train it under that class label :)
