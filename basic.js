@@ -2,6 +2,7 @@ let MOVEMENT = "STILL";
 let MOVEMENT_PROBABILITY = [0, 0, 0];
 let KEY_IS_PRESSED_DOWN = false;
 let showControlInstructions = false;
+let gameCompleted = false;
 
 var canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth - 500;
@@ -113,6 +114,9 @@ document.getElementById("play").addEventListener("click", function () {
 let KEYWORD;
 
 function pauseGame(msg, msg1, msg2) {
+  // Dont resume the game if the game
+  // once it is completed
+  if (gameCompleted) return;
   if (GAMING) {
     if (msg) {
       ctx.save();
@@ -162,9 +166,13 @@ function pauseGame(msg, msg1, msg2) {
     GAMING = false;
 
     if (msg == "PAUSED") pauseS.play();
-    else if (msg == "GameOver:~(") gameover.play();
-    else if (msg == "Congratualation For Completing The Game:~)")
+    else if (msg == "GameOver:~(") {
+      gameover.play();
+      gameCompleted = true;
+    } else if (msg == "Congratualation For Completing The Game:~)") {
       complete.play();
+      gameCompleted = true;
+    }
 
     BACKGROUNDS.pause();
 
