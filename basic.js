@@ -1,6 +1,7 @@
 let MOVEMENT = "STILL";
 let MOVEMENT_PROBABILITY = [0, 0, 0];
 let KEY_IS_PRESSED_DOWN = false;
+let showControlInstructions = false;
 
 var canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth - 500;
@@ -122,6 +123,23 @@ function pauseGame(msg, msg1, msg2) {
       ctx.fillStyle = "rgb(255,255,255,1)";
       ctx.fillText(msg, canvas.width * 0.5, 270);
     }
+
+    if (showControlInstructions) {
+      ctx.textAlign = "left";
+      ctx.font = "italic normal 800 20px arial";
+      ctx.fillText(
+        "Press key A or Left Arrow to move Left",
+        10,
+        0.93 * canvas.height
+      );
+      ctx.fillText(
+        "Press key D or Right Arrow to move Right",
+        10,
+        0.97 * canvas.height
+      );
+      ctx.textAlign = "center";
+    }
+
     if (msg1) {
       ctx.font = "italic normal 400 30px arial";
       ctx.fillText(msg1, canvas.width * 0.5, 310);
@@ -152,6 +170,7 @@ function pauseGame(msg, msg1, msg2) {
 
     clearInterval(KEYWORD);
   } else {
+    showControlInstructions = false;
     KEYWORD = setInterval(Pausing, 25);
     BACKGROUNDS.play();
     // stop = setInterval(repeat, 20);
@@ -164,6 +183,7 @@ window.addEventListener("keydown", function (event) {
   KEY_IS_PRESSED_DOWN = true;
 
   if (event.keyCode == 32) {
+    showControlInstructions = true;
     pauseGame("PAUSED");
   }
 });
@@ -636,9 +656,10 @@ function repeat() {
   brick.draw();
 
   shoot.update();
-  if (done == 2)
+  if (done == 2) {
+    showControlInstructions = true;
     pauseGame("START", "Enter Space To Begin", "Brought To You By");
-
+  }
   done++;
 
   for (var j = 0; j < X.length; j++) {
