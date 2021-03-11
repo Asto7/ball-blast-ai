@@ -1,5 +1,8 @@
 ### ball-blast-ai
-
+A game where a player has to hit balls falling from the sky by using trusty cannon
+(Gun). Player has to stop the balls from falling before they hit the cannon. Once the strength of a ball
+reaches to 0 from an initial level it again replicates itself with half the amount of initial strength and
+it goes that way. It raises the difficult level each time the balls count drops to zero. [Link](https://github.com/Asto7/DTask2) for only Game without visual controls feature.
 
 ### Setup
 ```
