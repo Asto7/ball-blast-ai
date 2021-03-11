@@ -5,8 +5,8 @@ let showControlInstructions = false;
 let gameCompleted = false;
 
 var canvas = document.getElementById("canvas");
-canvas.width = window.innerWidth - 500;
-canvas.height = window.innerHeight / 1.13;
+canvas.width = window.innerWidth / 1.25;
+canvas.height = window.innerHeight / 1.25;
 var ctx = canvas.getContext("2d");
 var GAMING = true;
 var stop;
@@ -21,7 +21,7 @@ var done = 0;
 var BACKGROUNDS = new Audio();
 BACKGROUNDS.src = "./assets/audios/backgroundD.mp3";
 BACKGROUNDS.volume = "0.25";
-var Gati = 8;
+var Gati = 18;
 
 var chapter = [];
 chapter.push(new Audio());
