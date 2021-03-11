@@ -9,6 +9,8 @@ it goes that way. It raises the difficult level each time the balls count drops 
 Visual Control Feature: User can train the canon movements(like move left, move right, stay still) on the browser itself with the help of mobilenet model, knn algorithm to classify and webcam to capture images for training the model.
 
 
+#### Live Demo: [Link](https://asto7.github.io/ball-blast-ai/)
+
 ### Setup
 ```
 npm install
@@ -18,7 +20,6 @@ npm install
 ```
 npm start
 ```
-#### Live Demo: [Link](https://asto7.github.io/ball-blast-ai/)
 
 #### How to Train the Model In Browser
 - Long Press On the Class Label Button for which you want to train the model, meanwhile webcam will capture the images(Current position) and train it under that class label :)
