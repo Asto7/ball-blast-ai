@@ -17,20 +17,22 @@ ul {
 #play {
   letter-spacing: 2px;
   font-weight: 700;
+  margin: auto;
   border-style: solid;
-  margin: 0px auto;
-  padding: 2px;
+  display: block;
+  padding: 0.5em;
+  border-radius: 0.3em;
   transition: all 1s;
   cursor: pointer;
   background-color: white;
   color: green;
-  visibility: hidden;
   border-width: 0.5px;
   border-color: black;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  visibility: hidden;
 }
 #play:hover {
-  letter-spacing: 4px;
-  font-size: 17px;
   color: white;
   background-color: black;
 }
