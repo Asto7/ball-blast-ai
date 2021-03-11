@@ -9,8 +9,8 @@
     "@tensorflow/tfjs": "^0.13.0"
   },
   "scripts": {
-    "start": "budo main.js:dist/build.js --live --host localhost",
-    "build": "browserify main.js -o dist/build.js"
+    "start": "budo main.js:assets/scripts/build.js --live --host localhost",
+    "build": "browserify main.js -o assets/scripts/build.js"
   },
   "pre-commit": [
     "build"
