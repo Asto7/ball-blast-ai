@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "budo main.js:assets/scripts/build.js --live --host localhost",
-    "build": "browserify main.js -o assets/scripts/build.js"
+    "build": "browserify main.js -o assets/scripts/build.js && browserify workerModel.js -o ./workerBuild.js"
   },
   "pre-commit": [
     "build"
