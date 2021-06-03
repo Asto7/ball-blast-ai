@@ -32,7 +32,6 @@ npm start
 - Long Press On the Class Label Button for which you want to train the model, meanwhile webcam will capture the images(Current position) and train it under that class label :)
  
 #### TODO
-1. Make it Responsive.
-2. Add touch controls for mobile devices.
-3. Generate random balls.
-4. Better UI.
+1. Add touch controls for mobile devices.
+2. Generate random balls.
+3. Better UI.
